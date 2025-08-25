@@ -15,9 +15,7 @@ const menuItems = [
   { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "Your Profile", url: "/dashboard/profile", icon: User },
   { title: "Your Gallery", url: "/dashboard/gallery", icon: ImageIcon },
-  { title: "Observations", url: "/dashboard/observations", icon: FileText },
-  { title: "Self Assessment", url: "/dashboard/self-assessment", icon: BookOpen },
-  { title: "Best Practices", url: "/dashboard/best-practices", icon: Calendar },
+  { title: "Best Practices", url: "/dashboard/best-practices", icon: BookOpen },
 ];
 
 export function AppSidebar() {
