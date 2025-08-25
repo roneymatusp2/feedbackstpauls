@@ -45,7 +45,15 @@ const subjects = [
 
 export function CreateObservationCard() {
   const [date, setDate] = useState<Date>();
-  const [showForm, setShowForm] = useState(false);
+  const [additionalObservers, setAdditionalObservers] = useState<string[]>([]);
+
+  const addObserver = () => {
+    setAdditionalObservers([...additionalObservers, ""]);
+  };
+
+  const removeObserver = (index: number) => {
+    setAdditionalObservers(additionalObservers.filter((_, i) => i !== index));
+  };
 
   return (
     <Card className="w-full">
@@ -56,17 +64,45 @@ export function CreateObservationCard() {
         </CardTitle>
       </CardHeader>
       <CardContent className="p-6">
-        {!showForm ? (
+        <div className="space-y-6">
           <Button 
-            onClick={() => setShowForm(true)}
+            onClick={addObserver}
             className="w-full"
             variant="outline"
           >
             + Add additional observers
           </Button>
-        ) : (
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          {/* Additional Observers */}
+          {additionalObservers.map((observer, index) => (
+            <div key={index} className="flex gap-2">
+              <Select value={observer} onValueChange={(value) => {
+                const newObservers = [...additionalObservers];
+                newObservers[index] = value;
+                setAdditionalObservers(newObservers);
+              }}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select additional observer" />
+                </SelectTrigger>
+                <SelectContent>
+                  {teachers.map((teacher) => (
+                    <SelectItem key={teacher} value={teacher}>
+                      {teacher}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Button 
+                variant="outline" 
+                size="icon"
+                onClick={() => removeObserver(index)}
+              >
+                ×
+              </Button>
+            </div>
+          ))}
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
                   Select Observation Type
@@ -171,16 +207,15 @@ export function CreateObservationCard() {
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <Button className="flex-1" variant="default">
-                Create Observation
-              </Button>
-              <Button variant="outline" onClick={() => setShowForm(false)}>
-                Cancel
-              </Button>
-            </div>
+          <div className="flex gap-4">
+            <Button className="flex-1" variant="default">
+              Create Observation
+            </Button>
+            <Button variant="outline">
+              Cancel
+            </Button>
           </div>
-        )}
+        </div>
       </CardContent>
     </Card>
   );
