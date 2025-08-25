@@ -37,9 +37,7 @@ export function AppSidebar() {
       <SidebarContent className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 border-r border-border/50">
         <div className="p-6 border-b border-border/50">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-elegant">
-              <img src="/src/assets/st-pauls-logo.png" alt="St. Paul's School" className="w-8 h-8 object-contain" />
-            </div>
+            <img src="/src/assets/st-pauls-logo.png" alt="St. Paul's School" className="w-10 h-10 object-contain" />
             {!isCollapsed && (
               <div>
                 <h2 className="font-bold text-foreground text-lg">St. Paul's</h2>
