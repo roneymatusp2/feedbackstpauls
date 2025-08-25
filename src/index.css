@@ -23,8 +23,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 201 100% 9.4%;
 
-    --primary: 220 90% 56%; /* Modern blue instead of ruby red */
-    --primary-glow: 220 90% 70%;
+    --primary: 350 100% 25.5%; /* St. Paul's Ruby Red */
+    --primary-glow: 350 100% 35%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 201 100% 9.4%; /* St. Paul's Indigo Blue */
@@ -41,19 +41,19 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 350 100% 25.5%;
+    --ring: 350 100% 25.5%; /* St. Paul's Ruby Red */
 
     --radius: 0.75rem;
     
     /* Custom gradient tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 56%), hsl(240 85% 65%));
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 56%), hsl(220 90% 70%));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(350 100% 25.5%), hsl(201 100% 9.4%));
+    --gradient-primary: linear-gradient(135deg, hsl(350 100% 25.5%), hsl(350 100% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(158 100% 7.5%), hsl(350 100% 25.5%));
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
     
     /* Shadow system */
-    --shadow-elegant: 0 10px 30px -10px hsl(220 90% 56% / 0.2);
-    --shadow-glow: 0 0 40px hsl(220 90% 70% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(350 100% 25.5% / 0.2);
+    --shadow-glow: 0 0 40px hsl(350 100% 35% / 0.3);
     
     /* Animation tokens */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,8 +86,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 350 100% 45%; /* Lighter Ruby Red for dark mode */
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;

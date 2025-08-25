@@ -6,20 +6,20 @@ export function DashboardStats() {
     {
       title: "Create a new observation",
       icon: Plus,
-      color: "bg-orange-500",
+      color: "bg-sps-ruby", /* St. Paul's Ruby Red */
       action: true
     },
     {
       title: "Observations made about you",
       count: "1 new",
       icon: Eye,
-      color: "bg-green-500"
+      color: "bg-sps-green" /* St. Paul's British Green */
     },
     {
       title: "Observations created by you",
-      count: "10 unpublished",
+      count: "10 unpublished", 
       icon: Users,
-      color: "bg-blue-500"
+      color: "bg-sps-indigo" /* St. Paul's Indigo Blue */
     }
   ];
 
