@@ -65,8 +65,8 @@ const Dashboard = () => {
   const [selectedObservee, setSelectedObservee] = useState("");
   const [showSelfAssessmentOptions, setShowSelfAssessmentOptions] = useState(false);
   
-  // Current user - in a real app this would come from auth context
-  const currentUser = "Current User Name"; // This should be replaced with actual user data
+  // Current user - should match the header information
+  const currentUser = "Roney Nascimento";
 
   const addObserver = () => {
     setAdditionalObservers([...additionalObservers, ""]);
