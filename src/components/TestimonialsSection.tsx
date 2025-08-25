@@ -5,51 +5,51 @@ import { Star, Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Dr. Sarah Mitchell",
-      role: "Head of Professional Development",
+      name: "Martina Oparaocha",
+      role: "Head of Senior School",
       school: "St. Paul's School, São Paulo",
-      content: "The OFS platform has revolutionised how we approach teacher observation. The peer-to-peer system creates a culture of collaborative growth rather than evaluation anxiety.",
+      content: "Our internal feedback platform has transformed how we approach professional development. The peer-to-peer observation system creates genuine opportunities for collaborative growth among our faculty.",
+      rating: 5,
+      image: "/lovable-uploads/6604dda8-a72a-4cda-852c-83819ac3280c.png"
+    },
+    {
+      name: "Dr. Louise Simpson",
+      role: "Head of Primary School",
+      school: "St. Paul's School, São Paulo",
+      content: "The best practices gallery has become an invaluable resource for sharing innovative teaching strategies across departments. Our teachers are genuinely engaged in continuous improvement.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108755-2616c78f7b12?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "James Thompson",
-      role: "Deputy Head Teacher",
-      school: "Wellington International School",
-      content: "The best practices gallery has become our go-to resource for sharing innovative teaching strategies. Teachers are genuinely excited about professional development now.",
+      name: "Mr. James Wright",
+      role: "Deputy Head Academic",
+      school: "St. Paul's School, São Paulo",
+      content: "The structured feedback system helps us support our teachers more effectively while maintaining our high academic standards. It's professional development that actually works.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "Prof. Maria Rodriguez",
-      role: "Academic Director",
-      school: "British School of Barcelona",
-      content: "The analytics and reporting features help us identify trends and support our teachers more effectively. It's data-driven professional development at its finest.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
     }
   ];
 
   const stats = [
     {
-      metric: "95%",
-      description: "Teacher Satisfaction Rate",
+      metric: "97%",
+      description: "Faculty Satisfaction Rate",
       subtitle: "with peer observation process"
     },
     {
-      metric: "40%",
-      description: "Increase in Collaboration",
-      subtitle: "between departments"
+      metric: "65%",
+      description: "Increase in Cross-Department",
+      subtitle: "collaboration initiatives"
     },
     {
-      metric: "3.2x",
+      metric: "4.2x",
       description: "More Feedback Sessions",
-      subtitle: "compared to traditional methods"
+      subtitle: "since platform implementation"
     },
     {
-      metric: "89%",
-      description: "Report Improved Teaching",
-      subtitle: "within first semester"
+      metric: "92%",
+      description: "Report Enhanced Teaching",
+      subtitle: "within first academic year"
     }
   ];
 

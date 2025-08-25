@@ -9,40 +9,40 @@ const Footer = () => {
       title: "Platform",
       links: [
         { name: "Features", href: "#features" },
-        { name: "Pricing", href: "#pricing" },
-        { name: "Security", href: "#security" },
-        { name: "Integrations", href: "#integrations" },
-        { name: "API Docs", href: "/api-docs" }
+        { name: "Faculty Login", href: "/login" },
+        { name: "Support", href: "/support" },
+        { name: "Training Resources", href: "/training" },
+        { name: "Platform Guide", href: "/guide" }
       ]
     },
     resources: {
       title: "Resources",
       links: [
-        { name: "Case Studies", href: "#testimonials" },
-        { name: "Best Practices Guide", href: "/resources" },
-        { name: "Training Materials", href: "/training" },
-        { name: "Research Papers", href: "/research" },
-        { name: "Webinars", href: "/webinars" }
+        { name: "Best Practices", href: "/best-practices" },
+        { name: "Faculty Handbook", href: "/handbook" },
+        { name: "Professional Development", href: "/development" },
+        { name: "Research & Innovation", href: "/research" },
+        { name: "Community Forum", href: "/forum" }
       ]
     },
-    company: {
-      title: "Company",
+    school: {
+      title: "Our School",
       links: [
-        { name: "About RyBro", href: "#about" },
-        { name: "Careers", href: "/careers" },
-        { name: "Press Kit", href: "/press" },
-        { name: "Contact", href: "#contact" },
-        { name: "Partners", href: "/partners" }
+        { name: "About St. Paul's", href: "https://www.stpauls.br" },
+        { name: "Academic Departments", href: "/departments" },
+        { name: "Faculty Directory", href: "/faculty" },
+        { name: "School Leadership", href: "/leadership" },
+        { name: "Contact Us", href: "/contact" }
       ]
     },
-    legal: {
-      title: "Legal",
+    support: {
+      title: "Support",
       links: [
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "GDPR Compliance", href: "/gdpr" },
-        { name: "Data Protection", href: "/data-protection" },
-        { name: "Cookie Policy", href: "/cookies" }
+        { name: "Help Centre", href: "/help" },
+        { name: "Technical Support", href: "/tech-support" },
+        { name: "Platform Updates", href: "/updates" },
+        { name: "Feedback", href: "/feedback" },
+        { name: "IT Services", href: "/it-services" }
       ]
     }
   };
