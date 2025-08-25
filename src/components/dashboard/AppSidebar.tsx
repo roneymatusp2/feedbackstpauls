@@ -33,17 +33,15 @@ export function AppSidebar() {
       : "hover:bg-accent/50 hover:text-accent-foreground text-muted-foreground hover:text-foreground";
 
   return (
-    <Sidebar className={isCollapsed ? "w-14" : "w-64"} collapsible="icon">
+    <Sidebar className="w-64" collapsible="icon">{/* Fixed width and always show content */}
       <SidebarContent className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 border-r border-border/50">
         <div className="p-6 border-b border-border/50">
           <div className="flex items-center gap-4">
             <img src="/src/assets/st-pauls-logo.png" alt="St. Paul's School" className="w-15 h-15 object-contain flex-shrink-0" />
-            {!isCollapsed && (
-              <div>
-                <h2 className="font-bold text-foreground text-lg">St. Paul's</h2>
-                <p className="text-xs text-muted-foreground font-medium">Teacher Portal</p>
-              </div>
-            )}
+            <div>
+              <h2 className="font-bold text-foreground text-lg">St. Paul's</h2>
+              <p className="text-xs text-muted-foreground font-medium">Teacher Portal</p>
+            </div>
           </div>
         </div>
 
@@ -61,7 +59,7 @@ export function AppSidebar() {
                         <div className="w-8 h-8 rounded-lg bg-background/50 flex items-center justify-center">
                           <item.icon className="h-4 w-4" />
                         </div>
-                        {!isCollapsed && <span className="font-medium">{item.title}</span>}
+                        <span className="font-medium">{item.title}</span>
                       </div>
                     </NavLink>
                   </SidebarMenuButton>
