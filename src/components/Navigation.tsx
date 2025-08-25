@@ -36,8 +36,8 @@ const Navigation = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-smooth">
               About Our School
             </a>
-            <Button variant="hero" size="sm">
-              Access Platform
+            <Button variant="hero" size="sm" asChild>
+              <a href="/dashboard">Access Platform</a>
             </Button>
           </div>
 
@@ -79,8 +79,8 @@ const Navigation = () => {
                 About Our School
               </a>
               <div className="px-3 pt-2">
-                <Button variant="hero" size="sm" className="w-full">
-                  Access Platform
+                <Button variant="hero" size="sm" className="w-full" asChild>
+                  <a href="/dashboard">Access Platform</a>
                 </Button>
               </div>
             </div>
