@@ -13,20 +13,12 @@ const TestimonialsSection = () => {
       image: "/lovable-uploads/6604dda8-a72a-4cda-852c-83819ac3280c.png"
     },
     {
-      name: "Dr. Louise Simpson",
-      role: "Head of Primary School",
+      name: "Sam Bishop",
+      role: "Senior School Assistant Head Learning & Teaching",
       school: "St. Paul's School, São Paulo",
-      content: "The best practices gallery has become an invaluable resource for sharing innovative teaching strategies across departments. Our teachers are genuinely engaged in continuous improvement.",
+      content: "The structured feedback system has revolutionised our approach to teaching and learning. It provides invaluable insights that help our educators refine their practice and enhance student outcomes.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616c78f7b12?w=400&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "Mr. James Wright",
-      role: "Deputy Head Academic",
-      school: "St. Paul's School, São Paulo",
-      content: "The structured feedback system helps us support our teachers more effectively while maintaining our high academic standards. It's professional development that actually works.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+      image: "/lovable-uploads/7fc345b5-b7ec-4f5c-bdd7-140f12f6aaaa.png"
     }
   ];
 
@@ -72,7 +64,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="relative group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
