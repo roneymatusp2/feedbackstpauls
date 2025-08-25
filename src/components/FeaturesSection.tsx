@@ -11,7 +11,7 @@ import {
   Lightbulb,
   Target
 } from "lucide-react";
-import dashboardPreview from "@/assets/dashboard-preview.jpg";
+// Removed dashboard preview import
 
 const FeaturesSection = () => {
   const features = [
@@ -89,17 +89,7 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        {/* Dashboard Preview */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-            <img
-              src={dashboardPreview}
-              alt="OFS Dashboard Preview"
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
-          </div>
-        </div>
+        {/* Removed fake dashboard preview image */}
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
