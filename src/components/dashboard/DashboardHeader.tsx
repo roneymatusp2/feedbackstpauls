@@ -8,7 +8,7 @@ export function DashboardHeader() {
       <div className="flex items-center gap-4">
         <SidebarTrigger />
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span>RyBro OFS - Roney Nascimento</span>
+          <span>St. Paul's School - Teacher Development Platform</span>
           <span className="text-xs bg-muted px-2 py-1 rounded">Date Range: 01/08/25 - 25/08/25</span>
         </div>
       </div>
