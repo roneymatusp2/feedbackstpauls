@@ -24,17 +24,23 @@ export function DashboardStats() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {stats.map((stat, index) => (
-        <Card key={index} className={`overflow-hidden ${stat.action ? 'cursor-pointer hover:shadow-lg transition-shadow' : ''}`}>
+        <Card key={index} className={`relative overflow-hidden border-0 shadow-elegant hover:shadow-glow transition-all duration-300 ${stat.action ? 'cursor-pointer hover:scale-105' : ''}`}>
           <CardContent className="p-0">
-            <div className={`h-20 ${stat.color} flex items-center justify-center`}>
-              <stat.icon className="h-8 w-8 text-white" />
+            <div className={`h-24 ${stat.color} relative flex items-center justify-center`}>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+              <div className="relative z-10 p-6 text-center">
+                <stat.icon className="h-10 w-10 text-white mx-auto drop-shadow-sm" />
+              </div>
             </div>
-            <div className="p-4">
-              <h3 className="font-medium text-foreground">{stat.title}</h3>
+            <div className="p-6 bg-gradient-to-b from-background to-background/80">
+              <h3 className="font-semibold text-foreground text-lg mb-2">{stat.title}</h3>
               {stat.count && (
-                <p className="text-sm text-muted-foreground mt-1">{stat.count}</p>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 bg-primary rounded-full"></div>
+                  <p className="text-sm text-muted-foreground font-medium">{stat.count}</p>
+                </div>
               )}
             </div>
           </CardContent>
