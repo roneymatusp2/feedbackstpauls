@@ -14,7 +14,7 @@ export function DashboardHeader() {
   };
 
   const handleProfileSettings = () => {
-    navigate('/profile');
+    navigate('/dashboard/profile');
   };
 
   const handlePreferences = () => {
