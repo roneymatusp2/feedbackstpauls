@@ -49,7 +49,7 @@ export function CreateObservationCard() {
 
   return (
     <Card className="w-full">
-      <CardHeader className="bg-orange-500 text-white">
+      <CardHeader className="bg-sps-ruby text-white">
         <CardTitle className="flex items-center gap-2">
           <Plus className="h-5 w-5" />
           Create a new observation
