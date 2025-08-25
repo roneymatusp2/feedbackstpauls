@@ -79,10 +79,10 @@ const Dashboard = () => {
           <div className="flex-1 p-6 space-y-6 relative">
             {/* Background logo with transparency */}
             <div 
-              className="absolute inset-0 bg-center bg-no-repeat opacity-25 pointer-events-none"
+              className="absolute inset-0 bg-center bg-no-repeat opacity-15 pointer-events-none"
               style={{ 
                 backgroundImage: "url('/src/assets/st-pauls-logo.png')",
-                backgroundSize: '200px',
+                backgroundSize: '350px',
                 backgroundPosition: 'center 70%'
               }}
             ></div>
