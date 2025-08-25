@@ -36,9 +36,9 @@ export function AppSidebar() {
     <Sidebar className={isCollapsed ? "w-14" : "w-64"} collapsible="icon">
       <SidebarContent className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 border-r border-border/50">
         <div className="p-6 border-b border-border/50">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-elegant">
-              <img src="/src/assets/st-pauls-logo.png" alt="St. Paul's School" className="w-6 h-6 object-contain" />
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-elegant">
+              <img src="/src/assets/st-pauls-logo.png" alt="St. Paul's School" className="w-8 h-8 object-contain" />
             </div>
             {!isCollapsed && (
               <div>
