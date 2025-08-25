@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       school: "St. Paul's School, São Paulo",
       content: "The structured feedback system has revolutionised our approach to teaching and learning. It provides invaluable insights that help our educators refine their practice and enhance student outcomes.",
       rating: 5,
-      image: "/lovable-uploads/7fc345b5-b7ec-4f5c-bdd7-140f12f6aaaa.png"
+      image: "/lovable-uploads/7726b775-db85-438c-9ca2-9f0671c4b81d.png"
     }
   ];
 
