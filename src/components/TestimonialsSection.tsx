@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
       school: "St. Paul's School, São Paulo",
       content: "Our internal feedback platform has transformed how we approach professional development. The peer-to-peer observation system creates genuine opportunities for collaborative growth among our faculty.",
       rating: 5,
-      image: "/lovable-uploads/6604dda8-a72a-4cda-852c-83819ac3280c.png"
+      image: "/placeholder-avatar-1.png"
     },
     {
       name: "Sam Bishop",
@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       school: "St. Paul's School, São Paulo",
       content: "The structured feedback system has revolutionised our approach to teaching and learning. It provides invaluable insights that help our educators refine their practice and enhance student outcomes.",
       rating: 5,
-      image: "/lovable-uploads/7726b775-db85-438c-9ca2-9f0671c4b81d.png"
+      image: "/placeholder-avatar-2.png"
     }
   ];
 
