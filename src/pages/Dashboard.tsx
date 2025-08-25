@@ -111,10 +111,6 @@ const Dashboard = () => {
                     </div>
                     <div className="p-6 bg-gradient-to-b from-background to-background/80">
                       <h3 className="font-semibold text-foreground text-lg mb-2">Observations made about you</h3>
-                      <div className="flex items-center gap-2">
-                        <div className="h-2 w-2 bg-primary rounded-full"></div>
-                        <p className="text-sm text-muted-foreground font-medium">1 new</p>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -130,10 +126,6 @@ const Dashboard = () => {
                     </div>
                     <div className="p-6 bg-gradient-to-b from-background to-background/80">
                       <h3 className="font-semibold text-foreground text-lg mb-2">Observations created by you</h3>
-                      <div className="flex items-center gap-2">
-                        <div className="h-2 w-2 bg-primary rounded-full"></div>
-                        <p className="text-sm text-muted-foreground font-medium">10 unpublished</p>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
