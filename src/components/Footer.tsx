@@ -111,27 +111,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="bg-secondary-foreground/5 rounded-2xl p-8 mb-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Connected with Our Community
-            </h3>
-            <p className="text-secondary-foreground/80 mb-6">
-              Get updates on new features, professional development opportunities, and community highlights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg bg-white text-foreground border-0 focus:ring-2 focus:ring-primary"
-              />
-              <Button variant="hero" size="lg">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
+        {/* Newsletter section removed */}
 
         <Separator className="bg-secondary-foreground/20 mb-8" />
 
