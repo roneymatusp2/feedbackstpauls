@@ -46,6 +46,7 @@ const subjects = [
 export function CreateObservationCard() {
   const [date, setDate] = useState<Date>();
   const [additionalObservers, setAdditionalObservers] = useState<string[]>([]);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const addObserver = () => {
     setAdditionalObservers([...additionalObservers, ""]);
@@ -54,6 +55,27 @@ export function CreateObservationCard() {
   const removeObserver = (index: number) => {
     setAdditionalObservers(additionalObservers.filter((_, i) => i !== index));
   };
+
+  if (!isExpanded) {
+    return (
+      <Card 
+        className="cursor-pointer hover:shadow-lg transition-shadow" 
+        onClick={() => setIsExpanded(true)}
+      >
+        <CardContent className="p-0">
+          <div className="h-24 bg-sps-ruby relative flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+            <div className="relative z-10 p-6 text-center">
+              <Plus className="h-10 w-10 text-white mx-auto drop-shadow-sm" />
+            </div>
+          </div>
+          <div className="p-6 bg-gradient-to-b from-background to-background/80">
+            <h3 className="font-semibold text-foreground text-lg mb-2">Create a new observation</h3>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="w-full">
@@ -211,7 +233,7 @@ export function CreateObservationCard() {
             <Button className="flex-1" variant="default">
               Create Observation
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" onClick={() => setIsExpanded(false)}>
               Cancel
             </Button>
           </div>
