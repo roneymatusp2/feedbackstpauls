@@ -4,12 +4,6 @@ import { Plus, Eye, Users } from "lucide-react";
 export function DashboardStats() {
   const stats = [
     {
-      title: "Create a new observation",
-      icon: Plus,
-      color: "bg-sps-ruby", /* St. Paul's Ruby Red */
-      action: true
-    },
-    {
       title: "Observations made about you",
       count: "1 new",
       icon: Eye,
@@ -24,9 +18,9 @@ export function DashboardStats() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {stats.map((stat, index) => (
-        <Card key={index} className={`relative overflow-hidden border-0 shadow-elegant hover:shadow-glow transition-all duration-300 ${stat.action ? 'cursor-pointer hover:scale-105' : ''}`}>
+        <Card key={index} className="relative overflow-hidden border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
           <CardContent className="p-0">
             <div className={`h-24 ${stat.color} relative flex items-center justify-center`}>
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
