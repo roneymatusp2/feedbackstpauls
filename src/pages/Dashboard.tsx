@@ -343,30 +343,116 @@ const Dashboard = () => {
                   <CardHeader className="bg-sps-green text-white">
                     <CardTitle className="flex items-center gap-2">
                       <Users className="h-5 w-5" />
-                      Self Assessment Options
+                      Self Assessment Configuration
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <p className="text-foreground">
-                        You have selected Self Assessment. Please proceed with your self-evaluation.
-                      </p>
+                    <div className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">
+                            Observation Type
+                          </label>
+                          <Select value={selectedObservationType} disabled>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                          </Select>
+                        </div>
+
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">
+                            Teacher (You)
+                          </label>
+                          <Select value={selectedObservee} disabled>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                          </Select>
+                        </div>
+
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">
+                            Assessment Type
+                          </label>
+                          <Select>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Self Assessment" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="self-assessment">Self Assessment</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">
+                            Select Key Stage/Class
+                          </label>
+                          <Select>
+                            <SelectTrigger>
+                              <SelectValue placeholder="NA" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {keyStages.map((stage) => (
+                                <SelectItem key={stage} value={stage}>
+                                  {stage}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                        </div>
+
+                        <div>
+                          <label className="text-sm font-medium text-foreground mb-2 block">
+                            Select Date
+                          </label>
+                          <Popover>
+                            <PopoverTrigger asChild>
+                              <Button
+                                variant="outline"
+                                className={cn(
+                                  "w-full justify-start text-left font-normal",
+                                  !date && "text-muted-foreground"
+                                )}
+                              >
+                                <CalendarIcon className="mr-2 h-4 w-4" />
+                                {date ? format(date, "PPP") : <span>Select Date</span>}
+                              </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="w-auto p-0" align="start">
+                              <Calendar
+                                mode="single"
+                                selected={date}
+                                onSelect={setDate}
+                                initialFocus
+                                className="pointer-events-auto"
+                              />
+                            </PopoverContent>
+                          </Popover>
+                        </div>
+                      </div>
+
                       <div className="flex gap-4">
                         <Button 
-                          className="flex-1" 
-                          variant="default"
+                          className="flex-1 bg-black text-white hover:bg-gray-800" 
                           onClick={() => {
-                            // Navigate to self-assessment form
-                            console.log("Starting self-assessment...");
+                            // Confirm and proceed with self-assessment
+                            console.log("Confirming self-assessment options...");
+                            // Here you would navigate to the actual self-assessment form
                           }}
                         >
-                          Start Self Assessment
+                          Confirm these options
                         </Button>
                         <Button 
                           variant="outline" 
                           onClick={() => {
                             setShowSelfAssessmentOptions(false);
                             setIsFormExpanded(false);
+                            setSelectedObservationType("");
+                            setSelectedObservee("");
                           }}
                         >
                           Cancel
