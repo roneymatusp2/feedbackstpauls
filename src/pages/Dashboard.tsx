@@ -76,8 +76,13 @@ const Dashboard = () => {
         <AppSidebar />
         <main className="flex-1 flex flex-col">
           <DashboardHeader />
-          <div className="flex-1 p-6 space-y-6">
-            <div className="max-w-7xl mx-auto">
+          <div className="flex-1 p-6 space-y-6 relative">
+            {/* Background logo with transparency */}
+            <div 
+              className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-25 pointer-events-none"
+              style={{ backgroundImage: "url('/src/assets/st-pauls-logo.png')" }}
+            ></div>
+            <div className="max-w-7xl mx-auto relative z-10">
               <h1 className="text-3xl font-bold text-foreground mb-8">Dashboard</h1>
               
               {/* Cards sempre fixos em uma linha */}
