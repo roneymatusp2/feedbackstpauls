@@ -62,12 +62,12 @@ const TestimonialsSection = () => {
             Success Stories
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Trusted by Leading
-            <span className="block text-accent">Educational Institutions</span>
+            Faculty Success Stories
+            <span className="block text-accent">at St. Paul's School</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Discover how schools worldwide are transforming their approach to teacher development 
-            with our observation and feedback platform.
+            Hear from our colleagues about how our internal platform is enhancing professional 
+            development and collaboration across departments.
           </p>
         </div>
 
@@ -114,10 +114,10 @@ const TestimonialsSection = () => {
         <div className="bg-white rounded-2xl p-8 shadow-elegant">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-foreground mb-2">
-              Proven Results Across Our Network
+              Impact Across Our School Community
             </h3>
             <p className="text-muted-foreground">
-              Real impact metrics from schools using OFS over the past 12 months
+              Real impact metrics from our faculty development platform over the past 12 months
             </p>
           </div>
           
@@ -142,20 +142,21 @@ const TestimonialsSection = () => {
         <div className="mt-16 text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Join These Success Stories?
+              Join Our Faculty Development Community
             </h3>
             <p className="text-muted-foreground mb-6">
-              Schedule a personalised demo to see how OFS can transform professional development at your institution.
+              Access our internal platform to connect with colleagues, share best practices, 
+              and continue your professional growth journey at St. Paul's School.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Badge variant="outline" className="text-accent border-accent">
-                📊 Free impact assessment
+                👥 Faculty-focused development
               </Badge>
               <Badge variant="outline" className="text-accent border-accent">
-                🎯 Customised implementation plan
+                🎯 Personalized growth plans
               </Badge>
               <Badge variant="outline" className="text-accent border-accent">
-                📞 Direct access to our team
+                💬 Ongoing support from colleagues
               </Badge>
             </div>
           </div>

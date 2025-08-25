@@ -21,32 +21,32 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-smooth">
-            🎓 Trusted by Leading Educational Institutions
+            🎓 St. Paul's School Internal Teacher Development Platform
           </Badge>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Transform Teacher
+            Empowering Our
             <span className="block bg-gradient-hero bg-clip-text text-transparent">
-              Observation & Feedback
+              Teaching Excellence
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Empower educators with peer-to-peer observation, structured feedback, and collaborative best practice sharing. 
-            Join institutions like St. Paul's School in revolutionising professional development.
+            Our internal platform for peer observation, collaborative feedback, and sharing best practices. 
+            Supporting continuous professional development across all departments at St. Paul's School.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button variant="hero" size="lg" className="group">
-              Start Free Trial
+              Access Platform
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="professional" size="lg" className="group">
               <Play className="mr-2 h-5 w-5" />
-              Watch Demo
+              Platform Tour
             </Button>
           </div>
 
@@ -56,22 +56,22 @@ const HeroSection = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-3">
                 <Users className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-foreground">500+</div>
-              <div className="text-muted-foreground">Active Educators</div>
+              <div className="text-3xl font-bold text-foreground">150+</div>
+              <div className="text-muted-foreground">Faculty Members</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-secondary/10 rounded-full mx-auto mb-3">
                 <Eye className="h-6 w-6 text-secondary" />
               </div>
-              <div className="text-3xl font-bold text-foreground">10,000+</div>
+              <div className="text-3xl font-bold text-foreground">2,500+</div>
               <div className="text-muted-foreground">Observations Completed</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-12 h-12 bg-accent/10 rounded-full mx-auto mb-3">
                 <Award className="h-6 w-6 text-accent" />
               </div>
-              <div className="text-3xl font-bold text-foreground">25</div>
-              <div className="text-muted-foreground">Partner Schools</div>
+              <div className="text-3xl font-bold text-foreground">12</div>
+              <div className="text-muted-foreground">Academic Departments</div>
             </div>
           </div>
         </div>

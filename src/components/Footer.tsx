@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube } from "lucide-react";
+import stPaulsLogo from "@/assets/st-pauls-logo.png";
 
 const Footer = () => {
   const footerLinks = {
@@ -53,30 +54,35 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-4">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">OFS</span>
-              </div>
-              <span className="text-2xl font-bold">RyBro Digital</span>
+          <div className="flex items-center space-x-2 mb-6">
+            <img 
+              src={stPaulsLogo} 
+              alt="St. Paul's School Logo" 
+              className="h-12 w-auto"
+            />
+            <div>
+              <span className="text-2xl font-bold">St. Paul's Feedback</span>
+              <div className="text-sm text-secondary-foreground/80">Internal Teacher Development Platform</div>
             </div>
-            <p className="text-secondary-foreground/80 leading-relaxed mb-6">
-              Transforming teacher professional development through innovative observation and feedback technology. 
-              Trusted by leading educational institutions worldwide.
-            </p>
+          </div>
+          <p className="text-secondary-foreground/80 leading-relaxed mb-6">
+            Supporting continuous professional development and collaborative learning 
+            for all faculty members at St. Paul's School, São Paulo.
+          </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-sm">hello@rybro.digital</span>
+                <span className="text-sm">feedback@stpauls.br</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm">+44 20 7123 4567</span>
+                <span className="text-sm">+55 (11) 3087-3399</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-sm">London, United Kingdom</span>
+                <span className="text-sm">Jardim Paulistano, São Paulo</span>
               </div>
             </div>
           </div>
@@ -109,10 +115,10 @@ const Footer = () => {
         <div className="bg-secondary-foreground/5 rounded-2xl p-8 mb-12">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with OFS
+              Stay Connected with Our Community
             </h3>
             <p className="text-secondary-foreground/80 mb-6">
-              Get the latest insights on teacher development, platform updates, and educational research.
+              Get updates on new features, professional development opportunities, and community highlights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
               <input
@@ -132,7 +138,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-sm text-secondary-foreground/60 mb-4 md:mb-0">
-            © 2024 RyBro Digital. All rights reserved. | Registered in England & Wales
+            © 2024 St. Paul's School, São Paulo. All rights reserved. | Internal Faculty Platform
           </div>
           
           {/* Social Links */}

@@ -80,12 +80,12 @@ const FeaturesSection = () => {
             Platform Features
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Everything You Need for
-            <span className="block text-primary">Effective Teacher Development</span>
+            Supporting Our Educators with
+            <span className="block text-primary">Comprehensive Development Tools</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Our comprehensive platform combines the best practices from educational research with modern technology 
-            to create a seamless experience for peer observation and professional growth.
+            Our internal platform provides St. Paul's School faculty with modern tools for peer observation, 
+            structured feedback, and collaborative professional growth.
           </p>
         </div>
 
@@ -128,17 +128,17 @@ const FeaturesSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-lg text-muted-foreground mb-6">
-            Ready to transform your institution's approach to teacher development?
+            Ready to explore our internal development platform?
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Badge variant="outline" className="text-primary border-primary">
-              ✨ No setup fees
+              ✨ Dedicated to St. Paul's Faculty
             </Badge>
             <Badge variant="outline" className="text-primary border-primary">
-              📚 Free training included
+              📚 Comprehensive training support
             </Badge>
             <Badge variant="outline" className="text-primary border-primary">
-              🔒 GDPR compliant
+              🔒 Secure internal platform
             </Badge>
           </div>
         </div>
