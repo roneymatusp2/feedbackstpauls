@@ -23,7 +23,31 @@ const teachers = [
   "Akan, Michael", "Almeida, Fabio", "Ascencio Dias, Ivan",
   "Backhouse, Robin", "Bagnariolli, Eduardo", "Baldon, Enrico",
   "Belmonte, Ana Carolina", "Best, Robert", "Bishop, Sam",
-  "Bishop, Chantal", "Cababe, Bruna"
+  "Bishop, Chantal", "Cababe, Bruna", "Campanholo, Leonardo",
+  "Carvalho, Rodrigo", "Corullon, Mariana", "Costa, Vanessa",
+  "Costa, Guilherme", "Crispin, Adam", "De Freitas Carlos, Natalia",
+  "Dicks, Jon", "Durham, Michelle", "Edge, Titus",
+  "Fabris Jankov, Ana Kristina", "Feitosa, Joao Bosco", "Fregonesi, Angela",
+  "Futada, Felipe", "Gaissler, Rubia", "Gilchrist, Ronnie",
+  "Gillon, Rodrigo", "Goto, Meire", "Green, Peter",
+  "Hall, Daniel", "Hallinan, Barry", "Hartmann, Camila",
+  "Hirano, Fabio", "Inhesta, Franli", "Jenkins, Douglas",
+  "Kelly, Patrick", "King, Emma", "Lalovic, Ivana",
+  "Lanfranchi, Bruno", "Lawrence, Rosemary", "Lima, Natalia",
+  "Mack, Laura", "Mann, Alan", "Marchi, Mariana",
+  "Martins, Raphael", "Melo, Magda", "Miranda, Heitor",
+  "Moreira, Victoria", "Moura, Brena", "Muller, Marcos",
+  "Mussnich, Isabel", "Mutyaba, Kibuuka", "Nascimento, Roney",
+  "Nash, Charles", "Neto, Djalma", "Neto, Augusto",
+  "Neves, Lucas", "Nogueira, Taluan", "Oliveira, Caio",
+  "Oliveira, Cicero", "Oparaocha, Martina", "Paganelli, Raquel",
+  "Radia, Nikhil", "Rae, Lauren", "Rebelo, Simone",
+  "Resende, Vivian", "Sanger, Zoe", "Santiago Chuahy, Adriana",
+  "Santos, Heitor", "Schreiber, Franciso", "Scoralick, Patricia",
+  "Seidl, Rodrigo", "Silva, Diego", "Sousa, Luiz",
+  "Spence, Steven", "Stipp, Daniela", "Tarrant, Jonathan",
+  "Towse, David", "Trevaskis, Glen", "Viegas, Shellida",
+  "Waszczylko, Justyna"
 ];
 
 const keyStages = ["NA", "Key Stage 1", "Key Stage 2", "Key Stage 3", "Key Stage 4", "Key Stage 5"];
