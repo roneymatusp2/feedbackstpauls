@@ -10,6 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import stPaulsLogo from "@/assets/st-pauls-logo.png";
 
 const menuItems = [
   { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
@@ -32,7 +33,7 @@ export function AppSidebar() {
       <SidebarContent className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 border-r border-border/50">
         <div className="p-6 border-b border-border/50">
           <div className="flex items-center gap-4">
-            <img src="/src/assets/st-pauls-logo.png" alt="St. Paul's School" className="w-12 h-12 object-contain flex-shrink-0" />
+            <img src={stPaulsLogo} alt="St. Paul's School" className="w-12 h-12 object-contain flex-shrink-0" />
             <div className="min-w-0 flex-1">
               <h2 className="font-bold text-foreground text-lg truncate">St. Paul's</h2>
               <p className="text-xs text-muted-foreground font-medium truncate">Teacher Portal</p>

@@ -10,6 +10,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { CalendarIcon, Plus, Eye, Users } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import stPaulsLogo from "@/assets/st-pauls-logo.png";
 
 const observationTypes = [
   "Senior School Learning Observation",
@@ -87,7 +88,7 @@ const Dashboard = () => {
             <div 
               className="absolute inset-0 bg-center bg-no-repeat opacity-15 pointer-events-none"
               style={{ 
-                backgroundImage: "url('/src/assets/st-pauls-logo.png')",
+                backgroundImage: `url(${stPaulsLogo})`,
                 backgroundSize: '350px',
                 backgroundPosition: 'center 70%'
               }}
