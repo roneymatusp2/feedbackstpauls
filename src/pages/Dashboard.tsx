@@ -61,6 +61,12 @@ const Dashboard = () => {
   const [isFormExpanded, setIsFormExpanded] = useState(false);
   const [date, setDate] = useState<Date>();
   const [additionalObservers, setAdditionalObservers] = useState<string[]>([]);
+  const [selectedObservationType, setSelectedObservationType] = useState("");
+  const [selectedObservee, setSelectedObservee] = useState("");
+  const [showSelfAssessmentOptions, setShowSelfAssessmentOptions] = useState(false);
+  
+  // Current user - in a real app this would come from auth context
+  const currentUser = "Current User Name"; // This should be replaced with actual user data
 
   const addObserver = () => {
     setAdditionalObservers([...additionalObservers, ""]);
@@ -193,7 +199,13 @@ const Dashboard = () => {
                           <label className="text-sm font-medium text-foreground mb-2 block">
                             Select Observation Type
                           </label>
-                          <Select>
+                          <Select value={selectedObservationType} onValueChange={(value) => {
+                            setSelectedObservationType(value);
+                            // Auto-select current user for self-assessment
+                            if (value === "Senior School Self Assessment") {
+                              setSelectedObservee(currentUser);
+                            }
+                          }}>
                             <SelectTrigger>
                               <SelectValue placeholder="Select Observation Type" />
                             </SelectTrigger>
@@ -211,7 +223,11 @@ const Dashboard = () => {
                           <label className="text-sm font-medium text-foreground mb-2 block">
                             Who are you observing?
                           </label>
-                          <Select>
+                          <Select 
+                            value={selectedObservee} 
+                            onValueChange={setSelectedObservee}
+                            disabled={selectedObservationType === "Senior School Self Assessment"}
+                          >
                             <SelectTrigger>
                               <SelectValue placeholder="Who are you observing?" />
                             </SelectTrigger>
@@ -294,10 +310,65 @@ const Dashboard = () => {
                       </div>
 
                       <div className="flex gap-4">
-                        <Button className="flex-1" variant="default">
+                        <Button 
+                          className="flex-1" 
+                          variant="default"
+                          onClick={() => {
+                            if (selectedObservationType === "Senior School Self Assessment") {
+                              setShowSelfAssessmentOptions(true);
+                            } else {
+                              // Handle other observation types
+                              console.log("Creating observation:", {
+                                type: selectedObservationType,
+                                observee: selectedObservee,
+                                date
+                              });
+                            }
+                          }}
+                        >
                           Create Observation
                         </Button>
                         <Button variant="outline" onClick={() => setIsFormExpanded(false)}>
+                          Cancel
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Self Assessment Options */}
+              {showSelfAssessmentOptions && (
+                <Card className="w-full mt-6">
+                  <CardHeader className="bg-sps-green text-white">
+                    <CardTitle className="flex items-center gap-2">
+                      <Users className="h-5 w-5" />
+                      Self Assessment Options
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      <p className="text-foreground">
+                        You have selected Self Assessment. Please proceed with your self-evaluation.
+                      </p>
+                      <div className="flex gap-4">
+                        <Button 
+                          className="flex-1" 
+                          variant="default"
+                          onClick={() => {
+                            // Navigate to self-assessment form
+                            console.log("Starting self-assessment...");
+                          }}
+                        >
+                          Start Self Assessment
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          onClick={() => {
+                            setShowSelfAssessmentOptions(false);
+                            setIsFormExpanded(false);
+                          }}
+                        >
                           Cancel
                         </Button>
                       </div>
