@@ -56,8 +56,8 @@ export function CreateObservationCard() {
     setAdditionalObservers(additionalObservers.filter((_, i) => i !== index));
   };
 
-  if (!isExpanded) {
-    return (
+  return (
+    <>
       <Card 
         className="cursor-pointer hover:shadow-lg transition-shadow" 
         onClick={() => setIsExpanded(true)}
@@ -74,26 +74,25 @@ export function CreateObservationCard() {
           </div>
         </CardContent>
       </Card>
-    );
-  }
 
-  return (
-    <Card className="w-full">
-      <CardHeader className="bg-sps-ruby text-white">
-        <CardTitle className="flex items-center gap-2">
-          <Plus className="h-5 w-5" />
-          Create a new observation
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="p-6">
-        <div className="space-y-6">
-          <Button 
-            onClick={addObserver}
-            className="w-full"
-            variant="outline"
-          >
-            + Add additional observers
-          </Button>
+      {isExpanded && (
+        <div className="lg:col-span-3 mt-8">
+          <Card className="w-full">
+            <CardHeader className="bg-sps-ruby text-white">
+              <CardTitle className="flex items-center gap-2">
+                <Plus className="h-5 w-5" />
+                Create a new observation
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="space-y-6">
+                <Button 
+                  onClick={addObserver}
+                  className="w-full"
+                  variant="outline"
+                >
+                  + Add additional observers
+                </Button>
           
           {/* Additional Observers */}
           {additionalObservers.map((observer, index) => (
@@ -229,16 +228,19 @@ export function CreateObservationCard() {
               </div>
             </div>
 
-          <div className="flex gap-4">
-            <Button className="flex-1" variant="default">
-              Create Observation
-            </Button>
-            <Button variant="outline" onClick={() => setIsExpanded(false)}>
-              Cancel
-            </Button>
-          </div>
+                <div className="flex gap-4">
+                  <Button className="flex-1" variant="default">
+                    Create Observation
+                  </Button>
+                  <Button variant="outline" onClick={() => setIsExpanded(false)}>
+                    Cancel
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      </CardContent>
-    </Card>
+      )}
+    </>
   );
 }
