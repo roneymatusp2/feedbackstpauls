@@ -2,8 +2,26 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Bell, Settings, LogOut, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function DashboardHeader() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Here you would typically clear authentication tokens, user data, etc.
+    localStorage.removeItem('authToken'); // Example
+    navigate('/');
+  };
+
+  const handleProfileSettings = () => {
+    navigate('/profile');
+  };
+
+  const handlePreferences = () => {
+    // For now, we can show an alert or navigate to a preferences page
+    alert('Preferences functionality will be implemented soon');
+  };
+
   return (
     <header className="h-20 border-b bg-gradient-to-r from-background via-background/95 to-background backdrop-blur-sm flex items-center justify-between px-8 shadow-sm">
       <div className="flex items-center gap-6">
@@ -44,16 +62,16 @@ export function DashboardHeader() {
           <DropdownMenuContent align="end" className="w-56 bg-background/95 backdrop-blur-sm border border-border/50 shadow-elegant">
             <DropdownMenuLabel className="font-semibold">My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="cursor-pointer hover:bg-accent/50">
+            <DropdownMenuItem className="cursor-pointer hover:bg-accent/50" onClick={handleProfileSettings}>
               <User className="mr-2 h-4 w-4" />
               Profile Settings
             </DropdownMenuItem>
-            <DropdownMenuItem className="cursor-pointer hover:bg-accent/50">
+            <DropdownMenuItem className="cursor-pointer hover:bg-accent/50" onClick={handlePreferences}>
               <Settings className="mr-2 h-4 w-4" />
               Preferences
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="cursor-pointer hover:bg-destructive/10 text-destructive focus:text-destructive">
+            <DropdownMenuItem className="cursor-pointer hover:bg-destructive/10 text-destructive focus:text-destructive" onClick={handleLogout}>
               <LogOut className="mr-2 h-4 w-4" />
               Sign Out
             </DropdownMenuItem>
