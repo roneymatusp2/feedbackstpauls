@@ -18,7 +18,7 @@ export function DashboardStats() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <>
       {stats.map((stat, index) => (
         <Card key={index} className="relative overflow-hidden border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
           <CardContent className="p-0">
@@ -40,6 +40,6 @@ export function DashboardStats() {
           </CardContent>
         </Card>
       ))}
-    </div>
+    </>
   );
 }

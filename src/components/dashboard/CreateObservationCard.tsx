@@ -76,7 +76,7 @@ export function CreateObservationCard() {
       </Card>
 
       {isExpanded && (
-        <div className="lg:col-span-3 mt-8">
+        <div className="col-span-full mt-8">
           <Card className="w-full">
             <CardHeader className="bg-sps-ruby text-white">
               <CardTitle className="flex items-center gap-2">
