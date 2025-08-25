@@ -285,6 +285,7 @@ const Dashboard = () => {
         </main>
       </div>
     </SidebarProvider>
+  );
 };
 
 export default Dashboard;
